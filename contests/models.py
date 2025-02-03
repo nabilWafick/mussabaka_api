@@ -12,3 +12,6 @@ class Contests(models.Model):
     public = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+class Meta:
+        verbose_name_plural = "Contests"

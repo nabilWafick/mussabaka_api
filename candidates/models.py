@@ -13,3 +13,7 @@ class Candidates(models.Model):
     contest = models.ForeignKey(Contests, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class Meta:
+        verbose_name_plural = "Candidates"
