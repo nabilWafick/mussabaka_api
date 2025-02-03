@@ -6,6 +6,7 @@ from categories.models import Categories
 from candidates.models import Candidates
 from contests.models import Contests
 
+
 class Questionnaires(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     candidate = models.ForeignKey(Candidates, on_delete=models.CASCADE)
@@ -17,6 +18,5 @@ class Questionnaires(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-
-class Meta:
+    class Meta:
         verbose_name_plural = "Questionnaires"

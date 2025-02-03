@@ -4,6 +4,7 @@ import uuid
 from jury.models import Jury
 from questionnaires.models import Questionnaires
 
+
 class Notes(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     questionnaire = models.ForeignKey(Questionnaires, on_delete=models.CASCADE)
@@ -12,6 +13,5 @@ class Notes(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-
-class Meta:
+    class Meta:
         verbose_name_plural = "Notes"

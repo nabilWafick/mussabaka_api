@@ -5,6 +5,7 @@ from schools.models import Schools
 from locations.models import Locations
 from contests.models import Contests
 
+
 class Candidates(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
@@ -14,6 +15,5 @@ class Candidates(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-
-class Meta:
+    class Meta:
         verbose_name_plural = "Candidates"
